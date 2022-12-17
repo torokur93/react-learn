@@ -1,23 +1,15 @@
 .Navbar{
   display: flex;
   align-items: center;
-  padding: 30px 25px;
-  height: 90px;
-  background-color: #21222A;
-  color: white;
-  font-weight: 600;
+  padding: 5px;
+  height: 50px;
+  background-color: white;
+  color: red;
 
 }
-
-.NavbarTitle{
-  color: rgb(97, 219, 251);
-  margin-right: auto;
-  font-weight: 700;
-}
-
 
 .Logo{
-  width: 80px;
+  width: 100px;
   margin-right: 7px;
 }
 
