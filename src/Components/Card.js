@@ -1,13 +1,12 @@
 import React from "react";
-import CardImage from "../Images/airbnb-card.webp"
 
-export default function Card(){
+export default function Card(props){
     return(
         <div className="Card">
-            <img className="CardImage" src={CardImage}/>
-            <p className="CardRating">⭐4,99<span className="CardRegion">(156) Egyesült államok</span></p>
-            <h5 className="CardMotto">Tervezd meg a tökéletes New York-i nyaralást</h5>
-            <h4 className="CardPrice">Akár €18 /fő</h4>
+            <img className="CardImage" src={props.img}/>
+            <p className="CardRating">⭐{props.rating}<span className="CardRegion">({props.reviewCount}) {props.country}</span></p>
+            <h5 className="CardTitle">{props.title}</h5>
+            <h4 className="CardPrice">Akár €{props.price} /fő</h4>
         </div>
     )
 }
