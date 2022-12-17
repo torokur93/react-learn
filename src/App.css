@@ -29,3 +29,33 @@
   font-weight: 100;
   width: 70%;
 }
+
+.Card{
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+
+.CardImage{
+  border-radius: 10px;
+}
+
+.CardRating{
+  margin: 5px;
+  font-weight: 400;
+  font-size: small;
+}
+
+.CardRegion{
+  color: grey;
+}
+
+.CardMotto{
+  margin: 5px;
+  font-weight: 100;
+  font-size: large;
+}
+
+.CardPrice{
+  margin: 5px;
+}
