@@ -1,27 +1,29 @@
 import React from "react";
 import Card from "./Card";
 import Collage from "./Collage";
+import Data from "../data";
+import data from "../data";
 
 export default function Main(){
+
+    const cards = Data.map(cardData => {
+        return(
+            <Card
+                img={"/Images/" + cardData.coverImg}
+                rating={cardData.stats.rating}
+                reviewCount={cardData.stats.reviewCount}
+                country={cardData.location}
+                title={cardData.title}
+                price={cardData.price}
+            /> 
+        )
+    })
+
+
     return(
         <div className="Main">
             <Collage/>
-            <Card
-                img="/Images/airbnb-card.webp"
-                rating="5.0"
-                reviewCount={150}
-                country="USA"
-                title="hát befosol olyan jó"
-                price={9900}
-            />
-            <Card
-                img="/Images/airbnb-card.webp"
-                rating="10.0"
-                reviewCount={99}
-                country="Japan"
-                title="ez a legjobb akkor is"
-                price={100}
-            />
+            {cards}
         </div>
     )
 }
