@@ -11,7 +11,7 @@ export default function Main(){
         return(
             <Card
                 key={cardData.id}
-                data= {cardData}
+                {...cardData}
             /> 
         )
     })
