@@ -1,16 +1,28 @@
 import React from "react";
+import Card from "./Card";
+import Collage from "./Collage";
+import Data from "../data";
+import data from "../data";
+import { isTemplateElement } from "@babel/types";
 
 export default function Main(){
+
+    const cards = Data.map(cardData => {
+        return(
+            <Card
+                key={cardData.id}
+                {...cardData}
+            /> 
+        )
+    })
+
+
     return(
         <div className="Main">
-            <h1 className="MainTitle">Fun facts:</h1>
-            <ul className="MainList">
-                <li>asdas</li>
-                <li>asdasd</li>
-                <li>fdgdfgdf</li>
-                <li>jhgjghj</li>
-                <li>ztrtzjuztu</li>
-            </ul>
+            <Collage/>
+            <div className="CardsList">
+                {cards}
+            </div>
         </div>
     )
 }
